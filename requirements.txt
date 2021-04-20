@@ -46,7 +46,7 @@ pickleshare==0.7.4
 pluggy==0.13.0
 pony==0.7.1
 prompt-toolkit==1.0.14
-py==1.8.0
+py==1.10.0
 pycryptodome==3.6.6
 Pygments==2.2.0
 PyMySQL==0.7.11
