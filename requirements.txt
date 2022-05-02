@@ -36,7 +36,7 @@ namedlist==1.7
 nbconvert==5.3.1
 nbformat==4.4.0
 notebook==5.5.0
-numpy==1.16.3
+numpy==1.21.0
 pandas==0.24.2
 pandocfilters==1.4.2
 parse==1.8.0
