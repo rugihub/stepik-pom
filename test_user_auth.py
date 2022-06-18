@@ -2,8 +2,7 @@ import pytest
 import requests
 
 class TestUserAuth:
-    excl_params = [("no cookie"), ("no token")]
-
+    
     def setup(self):
         url = "https://playground.learnqa.ru/api/user/login"
         data = {'email': 'vinkotov@example.com',
@@ -32,8 +31,11 @@ class TestUserAuth:
         user_id_from_check_method = res2.json()['user_id']
         #print(user_id_from_check_method)
 
-        assert self.user_id_from_auth_method == user_id_from_check_method, "User_id not equal"
+        assert self.user_id_from_auth_method == user_id_from_check_method, \
+                "User_id not equal"
 
+
+    excl_params = [("no cookie"), ("no token")]
 
     @pytest.mark.parametrize('cond', excl_params)
     def test_neg_auth_check(self, cond):
@@ -50,6 +52,7 @@ class TestUserAuth:
             )
 
         assert 'user_id' in res2.json(), "No user_id in 1st response"
+        
         user_id_from_check_method = res2.json()['user_id']
 
         assert user_id_from_check_method == 0, f"User not authorized via {cond}"
