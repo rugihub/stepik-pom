@@ -59,7 +59,7 @@ pytube==9.4.0
 pytz==2019.1
 pywinpty==0.5.1
 pyzmq==17.0.0
-requests==2.19.1
+requests==2.31.0
 robotframework==3.0.2
 scipy==1.2.1
 seaborn==0.9.0
